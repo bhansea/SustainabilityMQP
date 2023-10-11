@@ -22,3 +22,5 @@ plt.xticks(rotation=90)
 
 # Show the plot
 plt.show()
+
+# West Virginia the most, but their population is 1.79 million whereas TX pop is 29.15 million 
