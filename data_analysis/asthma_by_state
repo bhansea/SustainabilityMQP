@@ -1,0 +1,26 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("C:/Users/charl/OneDrive - Worcester Polytechnic Institute (wpi.edu)/Desktop/asthma_by_state_csv.csv", encoding='latin1')
+df = pd.DataFrame(data)
+
+data_sorted1 = data.sort_values(by='Percent With Current Asthma (SE)', ascending=False)
+data_sorted2 = data.sort_values(by='Number With Current Asthma', ascending=True)
+plt.figure(figsize=(25, 25))  # Adjust the figure size as needed
+
+# Plot the bar chart
+plt.bar(data['State or Territory'], data_sorted2['Number With Current Asthma'])
+
+
+# Add labels and title
+plt.xlabel('State or Territory')
+plt.ylabel('Number With Current Asthma')
+plt.title('Asthma by State or Territory')
+
+# Rotate x-axis labels for better readability (optional)
+plt.xticks(rotation=90)
+
+# Show the plot
+plt.show()
+
+# West Virginia the most, but their population is 1.79 million whereas TX pop is 29.15 million 
