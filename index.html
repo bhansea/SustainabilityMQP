@@ -4,6 +4,7 @@
     <title>Landing Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -20,15 +21,145 @@
 </head>
 <body>
 
-    <div class="sidebar">
+    <div class="sidebar close">
+    <ul class="nav-links">
+        <!--HOME-->
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Home</a></li>
+        </ul>
+      </li>
+        <!--CATEGORY-->
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Category</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">PHP & MySQL</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Posts</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Posts</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Login Form</a></li>
+          <li><a href="#">Card Design</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Analytics</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Analytics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart' ></i>
+          <span class="link_name">Chart</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Chart</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-plug' ></i>
+            <span class="link_name">Plugins</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Plugins</a></li>
+          <li><a href="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-compass' ></i>
+          <span class="link_name">Explore</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Explore</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="h1">Identifying Sustainability Issues through Data Exploration</span>
+
+
+
+    </div>
+  </section>
+
+  <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+     let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+     arrowParent.classList.toggle("showMenu");
+      });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("close");
+    });
+  </script>
+
+    <!--<div class="sidebar">
         <a href="index.html" class="sidebar-link-b"> <span class="material-symbols-outlined">home</span><span class="sidebar-text-b">Home</span></a>
         <a href="index.html" class="sidebar-link-a"> <span class="material-symbols-outlined">home</span><span class="sidebar-text-a">Greenhouse Gasses</span></a>
         <a href="index.html" class="sidebar-link-a"> <span class="material-symbols-outlined">home</span><span class="sidebar-text-a">Power Plants</span></a>
         <a href="index.html" class="sidebar-link-a"> <span class="material-symbols-outlined">home</span><span class="sidebar-text-a">Health Impacts</span></a>
-    </div>
+    </div>-->
 
-
-    <div class="main-content">
+    <!--<div class="main-content">
 
         <div class="header">
             Identifying Sustainability Issues through Data Exploration
@@ -39,9 +170,21 @@
         <div class="container">
             <h1>Introduction</h1>
             <p>
-                As the world's population continues to grow and modernize, the topic of energy consumption has taken center stage in discussions of sustainability, economic stability, and environmental responsibility. Despite the worldwide imperative to reduce greenhouse gas and carbon emissions, there has been a noticeable increase in environmental pollution, primarily due to shifts in economic growth and energy consumption. For instance, the utilization of primary energy sources contributes to over 85% of CO2 emissions, leading to adverse effects on both humans and animal species.
-                <br>According to a projection from the U.S. Energy Information Administration, if current technological trends and policies persist, global energy consumption is anticipated to surge by nearly 50% from 2020 levels to the year 2050. This remarkable increase in energy demand is attributed to rapid population growth, expanding economies, and higher living standards; with estimates suggesting a potential rise in global energy needs by a factor of 1.5-3 times by 2050.
+                As the world's population continues to grow and modernize, the topic of energy consumption has taken center stage in discussions of sustainability, economic stability, and environmental responsibility. Despite the worldwide imperative to reduce greenhouse gas and carbon emissions, there has been a noticeable increase in environmental pollution, primarily due to shifts in economic growth and energy consumption. For instance, the utilization of primary energy sources contributes to over 85% of CO2 emissions, leading to adverse effects on both humans and animal species. Tragically, this results in the loss of approximately seven million lives each year ​(Agbede, Bani, Azman-Sain, & Naseem, 2021)​.
+
+                <br>According to a projection from the U.S. Energy Information Administration, if current technological trends and policies persist, global energy consumption is anticipated to surge by nearly 50% from 2020 levels to the year 2050. This remarkable increase in energy demand is attributed to rapid population growth, expanding economies, and higher living standards; with estimates suggesting a potential rise in global energy needs by a factor of 1.5-3 times by 2050 ​(Pham, Li, & Bui, 2023)​. The drastic increase in energy consumption places a higher demand on non-renewable energy sources, including coal, oil, and natural gas, which are widely recognized as the primary culprits behind climate change, resulting in the escalation of extreme weather events, sea-level rise, and the overall degradation of our planet's environment.
             </p>
+            <h1>Background</h1>
+            <p>
+                Earth’s atmosphere is composed of about 78 percent nitrogen, 21 percent oxygen, 0.9 percent argon, and 0.1 percent other gases ​(National Geographic Society, 2023)​. Carbon dioxide and methane are a part of the 0.1 percent of other gases. Greenhouse gases are responsible for trapping heat, and notable examples of these gases are nitrous oxide, methane, and carbon dioxide. Increased emissions of greenhouse gases contribute to elevated concentrations in the atmosphere, leading to a rise in Earth's temperature. These concentrations are gauged in parts per million, parts per billion, and parts per trillion. To put it into perspective, one part per million corresponds to roughly one drop of water dispersed into about 13 gallons of liquid, approximately equivalent to the fuel tank capacity of a compact car ​(EPA, 2023)​.
+
+                 <br>Nitrous Oxide, or N2O, poses a serious threat to our atmosphere. While it might not be as notorious as carbon dioxide or methane when it comes to global warming, it is a greenhouse gas that tends to fly under the radar. Also known as laughing gas, N2O is the forgotten greenhouse gas contributing to climate change. It is often overlooked because it doesn't linger in the atmosphere as long as some other greenhouse gases. However, its warming potential renders it problematic for our earth’s future. Pound for pound, N2O is about 300 times more effective at trapping heat than carbon dioxide over a 20-year period ​(Brind'Amour & Lee, 2022)​. Many industrial activities contribute to the release of nitrous oxide into the air, with the main source being power plants.
+
+                <br>Methane, is the more well-known gas in our atmospheric pollution, contributes major threats to both climate and health aspects. While it does not linger as long as carbon dioxide, this gas is an extremely potent gas—it may exit the atmosphere quickly, but its effects leave a lasting impact. Methane is more than 25 times more effective at trapping heat than carbon dioxide over a century. Short-term, it is over 80 times more potent, making it a powerful warming agent. (US Environmental Protection Agency, 2023) The primary sources of these emissions are livestock digestion, rice cultivation, and the extraction and burning of fossil fuels all contribute to methane's grand entrance into our atmosphere.
+
+                <br>Despite comprising only 0.04% of Earth's atmosphere, carbon dioxide plays a significant role in global warming (Fecht, 2021). Naturally present in the atmosphere as part of the Earth's carbon cycle, carbon dioxide (CO2) is involved in the ongoing flow of carbon among the atmosphere, oceans, soil, plants, and animals. Unfortunately, human activities are disrupting this cycle by increasing atmospheric CO2 levels and impacting the ability of natural sinks, like forests and soils, to absorb and retain CO2. While various natural sources contribute to CO2 emissions, the substantial increase since the industrial revolution is primarily attributed to human-related activities. In 2021, carbon dioxide accounted for 79% of all U.S. greenhouse gas emissions resulting from human activities, as reported by the EPA. The main contributors to these emissions are transportation and the combustion of fossil fuels for energy ​(EPA, 2023)​.
+            </p>
+
         </div>
 
         <footer>
@@ -49,6 +192,7 @@
                 <p style="font-size: 14px ">&copy; 2024 My Website. All rights reserved.</p>
             </div>
         </footer>
-    </div>
-</body>
+    </div>-->
+
+    </body>
 </html>
