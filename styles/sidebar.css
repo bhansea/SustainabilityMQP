@@ -53,7 +53,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 260px;
+  width: 290px;
   background: white;
   z-index: 100;
   transition: all 0.5s ease;
@@ -134,7 +134,6 @@
 .sidebar .nav-links li .sub-menu{
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #e2e2e2;
   display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
