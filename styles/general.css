@@ -56,7 +56,7 @@ body {
 .figure {
   display: block;
   margin: 25px auto 50px;
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
