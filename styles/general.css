@@ -53,6 +53,13 @@ body {
     padding: 10px 50px 25px 50px;/* top right bottom left*/
 }
 
+.figure {
+  display: block;
+  margin: 25px auto 50px;
+  max-width: 100%;
+  height: auto;
+}
+
 footer {
     background: #EDEFF5;
     color: black;
