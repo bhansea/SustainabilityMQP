@@ -1,2 +1,4 @@
 # SustainabilityMQP
-Identifying Sustainability Issues Through Data Exploration - MQP project completed by 3 WPI students
+Sustainability Insights: Navigating Environmental Challenges through Data Exploration<br>
+Submitted to the Faculty of the Worcester Polytechnic Institute in partial fulfillment of the requirements for the Degree of Bachelor of Science in Data Science.<br>
+Contributors: Brandon Luong, Sydney Peno, Charlotte Carter, Professor Torumoy Ghoshal<br>
